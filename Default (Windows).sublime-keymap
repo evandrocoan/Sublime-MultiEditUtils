@@ -1,11 +1,11 @@
 [
   { "keys": ["shift+escape"], "command": "jump_to_last_region" },
-  { "keys": ["ctrl+alt+u"], "command": "add_last_selection" },
-  { "keys": ["ctrl+alt+c"], "command": "cycle_through_regions" },
-  { "keys": ["ctrl+alt+n"], "command": "normalize_region_ends" },
-  { "keys": ["ctrl+alt+,"], "command": "split_selection" },
-  { "keys": ["ctrl+alt+s"], "command": "strip_selection" },
-  { "keys": ["ctrl+alt+r"], "command": "remove_empty_regions", "context":
+  { "keys": ["ctrl+shift+o"], "command": "add_last_selection" },
+  { "keys": ["ctrl+shift+c"], "command": "cycle_through_regions" },
+  { "keys": ["ctrl+shift+n"], "command": "normalize_region_ends" },
+  { "keys": ["ctrl+shift+,"], "command": "split_selection" },
+  { "keys": ["ctrl+shift+s"], "command": "strip_selection" },
+  { "keys": ["ctrl+shift+r"], "command": "remove_empty_regions", "context":
     [
       {"key": "setting.is_widget", "operator": "equal", "operand": false}
     ]
@@ -28,8 +28,7 @@
   // { "keys": ["ctrl+alt+f", "ctrl+r"],           "command": "multi_find_all_regex", "args": {"case": false}},
   // { "keys": ["ctrl+alt+f", "ctrl+alt+shift+r"], "command": "multi_find_all_regex", "args": {"subtract": true, "case": false}},
 
-
-  { "keys": ["ctrl+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
+  { "keys": ["alt+w", "alt+e"], "command": "selection_fields", "args": {"mode": "smart"} },
   { "keys": ["escape"], "command": "selection_fields",
     "args": {"mode": "pop"},
     "context":
