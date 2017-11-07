@@ -2,7 +2,12 @@
   { "keys": ["shift+escape"], "command": "jump_to_last_region" },
   { "keys": ["ctrl+shift+o"], "command": "add_last_selection" },
   { "keys": ["ctrl+shift+c"], "command": "cycle_through_regions" },
-  { "keys": ["ctrl+shift+n"], "command": "normalize_region_ends" },
+  { "keys": ["ctrl+shift+n"], "command": "normalize_region_ends", "context":
+    [
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+    ],
+  },
+
   { "keys": ["ctrl+shift+,"], "command": "split_selection" },
   { "keys": ["ctrl+shift+s"], "command": "strip_selection" },
   { "keys": ["ctrl+shift+r"], "command": "remove_empty_regions", "context":
