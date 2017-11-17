@@ -1,20 +1,26 @@
 [
-  { "keys": ["shift+escape"], "command": "jump_to_last_region" },
+  { "keys": ["shift+escape"], "command": "jump_to_last_region", "context":
+    [
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+    ],
+  },
+
   { "keys": ["ctrl+shift+o"], "command": "add_last_selection" },
-  { "keys": ["ctrl+shift+c"], "command": "cycle_through_regions" },
+  // { "keys": ["ctrl+alt+c"], "command": "cycle_through_regions" },
+
   { "keys": ["ctrl+shift+n"], "command": "normalize_region_ends", "context":
     [
       { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
     ],
   },
 
-  { "keys": ["ctrl+shift+,"], "command": "split_selection" },
-  { "keys": ["ctrl+shift+s"], "command": "strip_selection" },
-  { "keys": ["ctrl+shift+r"], "command": "remove_empty_regions", "context":
-    [
-      {"key": "setting.is_widget", "operator": "equal", "operand": false}
-    ]
-  },
+  // { "keys": ["ctrl+alt+,"], "command": "split_selection" },
+  // { "keys": ["ctrl+alt+s"], "command": "strip_selection" },
+  // { "keys": ["ctrl+alt+r"], "command": "remove_empty_regions", "context":
+  //   [
+  //     {"key": "setting.is_widget", "operator": "equal", "operand": false}
+  //   ]
+  // },
 
   // Multi Find All example keybindings, uncomment to activate
 
