@@ -1,8 +1,9 @@
 [
-  { "keys": ["shift+escape"], "command": "jump_to_last_region", "context":
-    [
-      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-    ],
+  { "keys": ["shift+escape"], "command": "jump_to_last_region",
+    // "context":
+    // [
+    //   { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+    // ],
   },
 
   { "keys": ["ctrl+shift+o"], "command": "add_last_selection" },
