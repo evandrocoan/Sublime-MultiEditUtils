@@ -1,5 +1,8 @@
 [
-  { "keys": ["shift+escape"], "command": "jump_to_last_region" },
+  // Is is preferred to use the command `single_selection_last` from the package `Clear Cursors
+  // Carets` instead of this command
+  // { "keys": ["shift+escape"], "command": "jump_to_last_region" },
+
   { "keys": ["super+alt+u"], "command": "add_last_selection" },
   { "keys": ["super+alt+c"], "command": "cycle_through_regions" },
   { "keys": ["super+alt+n"], "command": "normalize_region_ends" },
