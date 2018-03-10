@@ -208,7 +208,10 @@ class SelectionFieldsCommand(sublime_plugin.TextCommand):
             else:
                 # if we reached the end restore the selection and
                 # remove the highlight regions
-                sel_regions = _restore_selection(view, only_other)
+                if _get_settings("clear_selection_to_first_field", False):
+                    sel_regions = [_restore_selection(view, only_other)[0]]
+                else:
+                    sel_regions = _restore_selection(view, only_other)
 
         # change to the result selections, if they exists
         if sel_regions:
