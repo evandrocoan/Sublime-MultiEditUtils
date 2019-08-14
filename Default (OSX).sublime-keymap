@@ -3,36 +3,41 @@
   // Carets` instead of this command
   // { "keys": ["shift+escape"], "command": "jump_to_last_region" },
 
-  { "keys": ["super+alt+u"], "command": "add_last_selection" },
-  { "keys": ["super+alt+c"], "command": "cycle_through_regions" },
-  { "keys": ["super+alt+n"], "command": "normalize_region_ends" },
-  { "keys": ["super+alt+,"], "command": "split_selection" },
-  { "keys": ["super+alt+s"], "command": "strip_selection" },
-  { "keys": ["super+alt+r"], "command": "remove_empty_regions", "context" :
+  { "keys": ["ctrl+shift+o"], "command": "add_last_selection" },
+  // { "keys": ["ctrl+alt+c"], "command": "cycle_through_regions" },
+
+  { "keys": ["ctrl+shift+n"], "command": "normalize_region_ends", "context":
     [
-      {"key": "setting.is_widget", "operator": "equal", "operand": false}
-    ]
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false },
+    ],
   },
+
+  // { "keys": ["ctrl+alt+,"], "command": "split_selection" },
+  // { "keys": ["ctrl+alt+s"], "command": "strip_selection" },
+  // { "keys": ["ctrl+alt+r"], "command": "remove_empty_regions", "context":
+  //   [
+  //     {"key": "setting.is_widget", "operator": "equal", "operand": false}
+  //   ]
+  // },
 
   // Multi Find All example keybindings, uncomment to activate
 
   // // main keybinding, set the search type you're most comfortable with, default is Case+Word
-  // { "keys": ["ctrl+super+g", "ctrl+super+g"],       "command": "multi_find_all", "args": {"case": true, "word": true}},
+  // { "keys": ["ctrl+alt+f", "ctrl+alt+f"],       "command": "multi_find_all", "args": {"case": true, "word": true}},
 
-  // { "keys": ["ctrl+super+g", "ctrl+c"],           "command": "multi_find_all", "args": {"case": false}},
-  // { "keys": ["ctrl+super+g", "c"],                "command": "multi_find_all", "args": {"case": true}},
-  // { "keys": ["ctrl+super+g", "ctrl+w"],           "command": "multi_find_all", "args": {"case": false, "word": true}},
-  // { "keys": ["ctrl+super+g", "w"],                "command": "multi_find_all", "args": {"case": true, "word": true}},
-  // { "keys": ["ctrl+super+g", "q"],                "command": "multi_find_all", "args": {"case": true, "word": true, "ignore_comments": true}},
+  // { "keys": ["ctrl+alt+f", "ctrl+c"],           "command": "multi_find_all", "args": {"case": false}},
+  // { "keys": ["ctrl+alt+f", "c"],                "command": "multi_find_all", "args": {"case": true}},
+  // { "keys": ["ctrl+alt+f", "ctrl+w"],           "command": "multi_find_all", "args": {"case": false, "word": true}},
+  // { "keys": ["ctrl+alt+f", "w"],                "command": "multi_find_all", "args": {"case": true, "word": true}},
+  // { "keys": ["ctrl+alt+f", "q"],                "command": "multi_find_all", "args": {"case": true, "word": true, "ignore_comments": true}},
 
   // // find all with regex search, additive(on top of current selection) or subtractive
-  // { "keys": ["ctrl+super+g", "r"],                "command": "multi_find_all_regex"},
-  // { "keys": ["ctrl+super+g", "ctrl+alt+r"],       "command": "multi_find_all_regex", "args": {"subtract": true}},
-  // { "keys": ["ctrl+super+g", "ctrl+r"],           "command": "multi_find_all_regex", "args": {"case": false}},
-  // { "keys": ["ctrl+super+g", "ctrl+alt+shift+r"], "command": "multi_find_all_regex", "args": {"subtract": true, "case": false}},
+  // { "keys": ["ctrl+alt+f", "r"],                "command": "multi_find_all_regex"},
+  // { "keys": ["ctrl+alt+f", "ctrl+alt+r"],       "command": "multi_find_all_regex", "args": {"subtract": true}},
+  // { "keys": ["ctrl+alt+f", "ctrl+r"],           "command": "multi_find_all_regex", "args": {"case": false}},
+  // { "keys": ["ctrl+alt+f", "ctrl+alt+shift+r"], "command": "multi_find_all_regex", "args": {"subtract": true, "case": false}},
 
-
-  { "keys": ["super+alt+d"], "command": "selection_fields", "args": {"mode": "smart"} },
+  { "keys": ["alt+w", "alt+e"], "command": "selection_fields", "args": {"mode": "smart"} },
 
   { "keys": ["escape"], "command": "selection_fields",
     "args": {"mode": "pop", "only_other": false},
@@ -40,6 +45,7 @@
     [
       { "key": "is_selection_field" },
       { "key": "selection_fields_escape_enabled" },
+      { "key": "num_selections", "operator": "equal", "operand": 1 },
 
       // set the default precedence to be less than snippet fields
       { "key": "has_next_field", "operator": "equal", "operand": false },

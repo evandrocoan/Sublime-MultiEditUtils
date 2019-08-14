@@ -45,6 +45,7 @@
     [
       { "key": "is_selection_field" },
       { "key": "selection_fields_escape_enabled" },
+      { "key": "num_selections", "operator": "equal", "operand": 1 },
 
       // set the default precedence to be less than snippet fields
       { "key": "has_next_field", "operator": "equal", "operand": false },
