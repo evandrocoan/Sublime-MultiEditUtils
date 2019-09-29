@@ -3,6 +3,29 @@ Sublime MultiEditUtils [![Build Status](https://travis-ci.org/philippotto/Sublim
 
 A Sublime Text 2/3 Plugin which enhances editing of multiple selections. In case you aren't familar with Sublime's awesome multiple selection features, visit [this page](https://www.sublimetext.com/docs/2/multiple_selection_with_the_keyboard.html).
 
+
+## Installation
+
+### By Package Control
+
+1. Download & Install `Sublime Text 3` (https://www.sublimetext.com/3)
+1. Go to the menu `Tools -> Install Package Control`, then,
+   wait few seconds until the `Package Control` installation finishes
+1. Go to the menu `Preferences -> Package Control`
+1. Type `Package Control Add Channel` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, input the following address and press <kbd>Enter</kbd>
+   ```
+   https://raw.githubusercontent.com/evandrocoan/StudioChannel/master/channel.json
+   ```
+1. Now, go again to the menu `Preferences -> Package Control`
+1. This time type `Package Control Install Package` on the opened quick panel and press <kbd>Enter</kbd>
+1. Then, search for `MultiEditUtils` and press <kbd>Enter</kbd>
+
+See also:
+1. [ITE - Integrated Toolset Environment](https://github.com/evandrocoan/ITE)
+1. [Package control docs](https://packagecontrol.io/docs/usage) for details.
+
+
 ## Features
 
 ### Preserve case while editing selection contents
@@ -84,9 +107,9 @@ ctrl+alt+f, q            case: true       word: true      ignore_comments: true
 Additionally, you can perform a regex search that finds all occurrences of the entered regex. It can be **additive** (applied on top of your current selection) or **subtractive** (removes the results of the search instead). Example keybindings:
 
 ```
-ctrl+alt+f, r                   
-ctrl+alt+f, ctrl+alt+r          subtract: true                 
-ctrl+alt+f, ctrl+r              case    : false                    
+ctrl+alt+f, r
+ctrl+alt+f, ctrl+alt+r          subtract: true
+ctrl+alt+f, ctrl+r              case    : false
 ctrl+alt+f, ctrl+alt+shift+r    subtract: true      case: false
 ```
 
@@ -136,9 +159,6 @@ Suggestion for more keybindings based on the arguments:
   "args": {"mode": "toggle", "only_other": true} },
 ```
 
-## Installation
-
-Either use [Package Control](https://sublime.wbond.net/installation) and search for `MultiEditUtils` or clone this repository into Sublime Text "Packages" directory.
 
 ## Shortcut Cheat Sheet
 
